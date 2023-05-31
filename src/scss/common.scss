@@ -1,0 +1,7 @@
+// Заголовки, загальні БЕМ блоки та інше...
+._section-title {
+	@include adaptiveValue('font-size', 64, 44);
+	margin-bottom: rem(45);
+	line-height: math.div(73, 64);
+	text-transform: uppercase;
+}

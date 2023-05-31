@@ -1,0 +1,108 @@
+//====================================================================================================
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include adaptiveValue('padding-top', 30, 15);
+  @include adaptiveValue('padding-bottom', 30, 15);
+  background-color: #fff;
+  border-bottom: 1px solid #d7d7d7;
+  z-index: 150;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: rem(15);
+  }
+  &__menu {
+    flex: 1 1 auto;
+  }
+}
+.menu {
+  &__body {
+    @media (max-width: $mobile) {
+      position: absolute;
+      width: auto;
+      top: rem(60);
+      right: rem(10);
+      transition: all 0.2s ease 0s;
+      opacity: 0;
+			transform: translate(0);
+      visibility: hidden;
+      background-color: $primaryColor;
+      color: #fff;
+      gap: rem(30);
+      padding: rem(30);
+      border-radius: rem(12);
+      .menu-open & {
+        opacity: 1;
+        visibility: visible;
+				transform: translateY(10px);
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: rem(35);
+    flex-wrap: wrap;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  &__link {
+    transition: color 0.2s ease 0s;
+    @media (any-hover: hover) {
+      &:hover {
+        color: $primaryColor;
+      }
+    }
+  }
+}
+//====================================================================================================
+
+//Burger
+.icon-menu {
+  display: none;
+  @media (max-width: $mobile) {
+    display: block;
+    position: relative;
+    width: rem(25);
+    height: rem(17);
+    z-index: 5;
+    border-radius: rem(18);
+    @media (any-hover: none) {
+      cursor: default;
+    }
+    span,
+    &::before {
+      content: '';
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 100%;
+      height: rem(2);
+      background-color: #3d3745;
+      border-radius: rem(18);
+    }
+    &::before {
+      top: 0;
+    }
+    span {
+      top: calc(50% - rem(1));
+      transform: translateX(10px);
+    }
+    .menu-open & {
+      span {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

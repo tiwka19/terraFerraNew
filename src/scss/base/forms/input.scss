@@ -1,0 +1,83 @@
+//<INPUT>
+// Сніппет (HTML): inp
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.input {
+  border-radius: 0 !important;
+  width: 100%;
+  display: block;
+  padding: 0px 20px;
+  border: 1px solid #eee;
+  &._form-focus {
+  }
+  &._form-error {
+  }
+}
+.input[placeholder]:not([data-placeholder-nohiden]) {
+  &::placeholder {
+    transition: opacity 0.3s;
+  }
+  &:focus::placeholder {
+    opacity: 0;
+  }
+}
+
+textarea.input {
+  resize: none;
+  padding: 0px 0px;
+}
+
+.switch {
+  display: inline-block;
+  height: rem(64);
+  position: relative;
+  width: rem(120);
+}
+
+.switch input {
+  display: none;
+}
+
+.advantages__slider {
+  background-color: #5c6bd7;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.advantages__slider:before {
+  content: '';
+  background-color: #fff;
+  bottom: 5.5px;
+  left: 5px;
+  position: absolute;
+  transition: 0.4s;
+  width: 53px;
+  height: 53px;
+}
+
+input:checked + .advantages__slider {
+  background-color: #f27c4f;
+}
+
+input:checked + .advantages__slider:before {
+  transform: translateX(55px);
+}
+
+.advantages__slider.round {
+  border-radius: 34px;
+}
+
+.advantages__slider.round:before {
+  border-radius: 50%;
+}
