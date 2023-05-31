@@ -16,3 +16,7 @@ checkSlider.addEventListener('click', () => {
     influencersContent.classList.remove('_active');
   }
 });
+
+
+
+document.querySelector('#date').textContent = new Date().getFullYear();
