@@ -287,7 +287,6 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    align-items: stretch;
     @media (max-width: $tablet) {
       margin: 0 -25px;
     }
@@ -303,7 +302,7 @@
   &__image-three {
     grid-row: span 2;
     img {
-      min-height: rem(450);
+      min-height: rem(350);
     }
   }
 }
