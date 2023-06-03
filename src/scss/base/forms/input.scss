@@ -9,14 +9,30 @@ textarea {
   appearance: none;
 }
 .input {
-  border-radius: 0 !important;
   width: 100%;
   display: block;
-  padding: 0px 20px;
-  border: 1px solid #eee;
+  padding: rem(15);
+  border: rem(2) solid #ebeaec;
+  font-size: rem(18);
+  line-height: math.div(21, 18);
+  border-radius: rem(13);
+  margin-bottom: rem(15);
+  outline: 0;
+  transition: border 0.3s ease 0s;
+  &::placeholder {
+    color: $mainColor;
+  }
   &._form-focus {
   }
   &._form-error {
+    border: rem(2) solid rgb(171, 53, 53);
+  }
+}
+
+._form-error {
+  input[type='checkbox']:checked + label:before,
+  input[type='checkbox']:not(:checked) + label:before {
+    border: rem(2) solid rgb(171, 53, 53);
   }
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {
@@ -32,6 +48,10 @@ textarea.input {
   resize: none;
   padding: 0px 0px;
 }
+
+
+
+
 
 .switch {
   height: rem(64);

@@ -154,9 +154,9 @@
               </div>
             </div>
             <div class="subscribe__images">
-              <div class="subscribe__image subscribe__image-one"><img src="@img/subscribe-image-1.png" alt="subscribe" /></div>
-              <div class="subscribe__image subscribe__image-three"><img src="@img/subscribe-image-3.png" alt="subscribe" /></div>
-              <div class="subscribe__image subscribe__image-two"><img src="@img/subscribe-image-2.png" alt="subscribe" /></div>
+              <div class="subscribe__image subscribe__image-one"><img data-src="@img/subscribe-image-1.png" alt="subscribe" /></div>
+              <div class="subscribe__image subscribe__image-three"><img data-src="@img/subscribe-image-3.png" alt="subscribe" /></div>
+              <div class="subscribe__image subscribe__image-two"><img data-src="@img/subscribe-image-2.png" alt="subscribe" /></div>
             </div>
           </div>
         </section>
@@ -227,7 +227,7 @@
               <picture>
                 <source srcset="@img/tools-phone.png" media="(min-width: 992px)" />
                 <source srcset="@img/tools-md.png" media="(min-width: 768px)" />
-                <img src="@img/tools-phone.png" alt="image" />
+                <img data-src="@img/tools-phone.png" alt="image" />
               </picture>
             </div>
             <div class="tools__data">
@@ -300,16 +300,18 @@
         </section>
         <section class="contacts">
           <div class="contacts__container">
-            <h2 class="contacts__title">Fashion co-creation platform</h2>
-            <a href="#" class="contacts__button button">Contact us</a>
-          </div>
-          <div class="mask__container">
-            <img src="@img/contacts-mask.svg" alt="mask" />
+            <div class="contacts__data">
+              <h2 class="contacts__title">Fashion co-creation platform</h2>
+              <a href="#" class="contacts__button button">Contact us</a>
+            </div>
+            <div class="contacts__mask">
+              <img src="@img/contacts-mask.svg" alt="mask" />
+            </div>
           </div>
         </section>
       </main>
       @@include('html/_footer.htm',{})
     </div>
-    @@include('html/_js.htm',{})
+    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
   </body>
 </html>

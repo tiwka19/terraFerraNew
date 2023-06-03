@@ -82,11 +82,11 @@ body {
     pointer-events: none;
     z-index: 149;
   }
-  .menu-open & {
-    &:after {
-      opacity: 1;
-    }
-  }
+  // .menu-open & {
+  //   &:after {
+  //     opacity: 1;
+  //   }
+  // }
   // Сайт завантажений
   .loaded & {
   }
@@ -102,7 +102,7 @@ body {
   }
   // Притискаємо footer
   > main {
-    @include adaptiveValue('padding-top', 190, 100);
+    @include adaptiveValue('padding-top', 150, 100);
     flex: 1 1 auto;
   }
   // Фікс для слайдерів
@@ -172,3 +172,6 @@ body {
 
 // Підключення стилів окремих сторінок
 @import 'home';
+@import 'team';
+@import 'plans';
+@import 'policy';

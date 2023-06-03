@@ -1,10 +1,53 @@
 <div id="popup" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">Закрити</button>
-			<div class="popup__text">
-				Text
-			</div>
-		</div>
-	</div>
+  <div class="popup__wrapper">
+    <div class="popup__content">
+      <button data-close type="button" class="popup__close">
+        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M9.08439 7.95729L6.39055 5.26345L8.96497 2.68903C9.12506 2.52894 9.21143 2.30957 9.20636 2.08009C9.2013 1.85082 9.10549 1.63009 8.94108 1.46568C8.77667 1.30126 8.55594 1.20545 8.32666 1.20039C8.09718 1.19533 7.87782 1.2817 7.71772 1.44179L5.14331 4.01621L2.44947 1.32237C2.28506 1.15795 2.06432 1.06214 1.83505 1.05708C1.60557 1.05202 1.38621 1.13839 1.22611 1.29848C1.06602 1.45857 0.979649 1.67794 0.984714 1.90742C0.989776 2.13669 1.08559 2.35743 1.25 2.52184L3.94384 5.21568L1.36942 7.79009C1.20933 7.95019 1.12296 8.16955 1.12802 8.39903C1.13309 8.6283 1.2289 8.84904 1.39331 9.01345C1.55772 9.17786 1.77845 9.27367 2.00773 9.27873C2.23721 9.2838 2.45657 9.19743 2.61666 9.03733L5.19108 6.46292L7.88492 9.15676C8.04933 9.32117 8.27006 9.41698 8.49934 9.42204C8.72882 9.42711 8.94818 9.34074 9.10828 9.18064C9.26837 9.02055 9.35474 8.80119 9.34967 8.5717C9.34461 8.34243 9.2488 8.1217 9.08439 7.95729Z"
+            fill="white"
+            stroke="white"
+            stroke-width="0.2" />
+        </svg>
+      </button>
+
+      <div data-tabs class="tabs" data-tabs-animate="300">
+        <nav data-tabs-titles class="tabs__navigation">
+          <button type="button" class="tabs__title _designers" data-target="_designer">Designer</button>
+          <button type="button" class="tabs__title _influencers" data-target="_influencer">Influencer</button>
+        </nav>
+        <div data-tabs-body class="tabs__content">
+          <div class="tabs__body">
+            <form class="form" method="POST">
+              <input autocomplete="off" type="text" name="form[]" placeholder="Name" class="input" data-required="text" />
+              <input autocomplete="off" type="email" name="form[]" placeholder="Email" class="input" data-required="email" />
+              <div class="form__row">
+                <input type="checkbox" class="checkbox" data-error="Field required" id="cb1" data-required="checkbox" />
+                <label for="cb1">I agree to <a href="#">Privacy Policy and Terms of Service</a> </label>
+              </div>
+              <div class="form__button">
+                <input type="submit" class="button" value="Join Waitlist" />
+              </div>
+            </form>
+          </div>
+
+          <div class="tabs__body">
+            <form class="form" method="POST" data-no-validate>
+              <input autocomplete="off" type="text" name="form[]" placeholder="Name" class="input" data-required="text" />
+              <input autocomplete="off" type="email" name="form[]" placeholder="Email" class="input" data-required="email" />
+              <input autocomplete="off" type="text" name="form[]" placeholder="Instagram" class="input" />
+
+              <div class="form__row">
+                <input type="checkbox" class=checkbox" id="cb2" data-required="checkbox" />
+                <label for="cb2">I agree to <a href="#">Privacy Policy and Terms of Service</a> </label>
+              </div>
+              <div class="form__button">
+                <input type="submit" class="button" value="Contact us" />
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
