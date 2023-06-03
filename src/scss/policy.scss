@@ -1,4 +1,5 @@
 .policy {
+  padding-bottom: rem(100);
   &__title {
     @include adaptiveValue('font-size', 30, 24);
     line-height: math.div(30, 36);
