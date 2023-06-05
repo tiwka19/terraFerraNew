@@ -270,6 +270,9 @@
   }
   &__content {
     padding: rem(25) rem(15);
+    ul {
+      margin-bottom: rem(45);
+    }
   }
   &__title {
     text-transform: uppercase;
@@ -279,9 +282,6 @@
     @media (max-width: $mobile) {
       font-size: rem(45);
     }
-  }
-  &__list {
-    margin-bottom: rem(45);
   }
   &__list-item {
     list-style-type: disc;
