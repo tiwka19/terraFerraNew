@@ -171,7 +171,7 @@ import * as flsScroll from './files/scroll/scroll.js';
 
 // Smooth page navigation
 // Documentation: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
-// flsScroll.pageNavigation();
+flsScroll.pageNavigation();
 // Functionality of adding classes to the header during scrolling
 // Documentation: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
 flsScroll.headerScroll();

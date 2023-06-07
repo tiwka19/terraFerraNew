@@ -10,14 +10,24 @@ const slider = () => {
   if (!checkSlider) return;
   checkSlider.addEventListener('click', () => {
     checkSlider.classList.toggle('_active');
-    if (checkSlider.classList.contains('_active')) {
-      designerContent.classList.add('_hide');
-      influencersContent.classList.add('_active');
-    } else {
-      designerContent.classList.remove('_hide');
-      influencersContent.classList.remove('_active');
-    }
+    checkSlider.classList.contains('_active') ? showDesigners() : showInfluencers();
   });
+
+  document.querySelector('.header').addEventListener('click', (e) => {
+    e.target.classList.contains('_influencers') ? showInfluencers() : null;
+    e.target.classList.contains('_designers') ? showDesigners() : null;
+  });
+
+  function showDesigners() {
+    designerContent.classList.add('_hide');
+    influencersContent.classList.add('_active');
+    document.querySelector('#checkbox').checked = false;
+  }
+  function showInfluencers() {
+    designerContent.classList.remove('_hide');
+    influencersContent.classList.remove('_active');
+    document.querySelector('#checkbox').checked = true;
+  }
 };
 slider();
 

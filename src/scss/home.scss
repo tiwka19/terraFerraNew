@@ -378,7 +378,7 @@
     &::after {
       content: '';
       position: absolute;
-      top: rem(90);
+      top: rem(86);
       @include adaptiveValue('top', 90, 20, 3, 1440, 992);
       z-index: -1;
       left: -100%;
@@ -420,6 +420,7 @@
   }
 
   &__data {
+    position: relative;
     padding: rem(60) 0 rem(30) 0;
     @media (max-width: $mobile) {
       padding-bottom: rem(60);
@@ -440,15 +441,15 @@
 }
 .contacts {
   position: relative;
-  &::before {
-    content: '';
-    position: absolute;
-    left: -100%;
-    width: 300%;
-    top: 0;
-    height: rem(1);
-    background-color: #d7d7d7;
-  }
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   left: -100%;
+  //   width: 300%;
+  //   top: 0;
+  //   height: rem(1);
+  //   background-color: #d7d7d7;
+  // }
   &__title {
     @include adaptiveValue('font-size', 34, 28);
     margin-bottom: rem(35);
@@ -459,8 +460,12 @@
     @include adaptiveValue('padding-bottom', 100, 50);
   }
   &__mask {
-    @media (max-width: $mobile) {
-      margin: 0 -50px;
+    margin: 0 auto;
+    max-width: rem(1440);
+    img {
+      @media (min-width: $mobile) {
+        width: 100%;
+      }
     }
   }
 }
