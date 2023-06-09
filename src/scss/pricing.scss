@@ -25,10 +25,10 @@
       &::after {
         content: '';
         position: absolute;
-        right: 0;
+        right: -1px;
         top: -12px;
         width: rem(1);
-        height: 100%;
+        height: rem(330);
         background: #d7d7d7;
       }
     }
