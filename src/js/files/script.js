@@ -13,7 +13,7 @@ const slider = () => {
     checkSlider.classList.contains('_active') ? showDesigners() : showInfluencers();
   });
 
-  document.querySelector('.header').addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
     e.target.classList.contains('_influencers') ? showInfluencers() : null;
     e.target.classList.contains('_designers') ? showDesigners() : null;
   });
@@ -31,18 +31,11 @@ const slider = () => {
 };
 slider();
 
-const popupButtons = document.querySelectorAll('[data-popup]');
-let designerButton = document.querySelector('.tabs__title._designers');
-let influencerButton = document.querySelector('.tabs__title._influencers');
-popupButtons.forEach((button) => {
-  button.addEventListener('click', function (e) {
-    if (this.classList.contains('_designers')) {
-      designerButton.click();
-    }
-    if (this.classList.contains('_influencers')) {
-      influencerButton.click();
-    }
-  });
+const menuItems = document.querySelectorAll('a[data-goto]');
+menuItems.forEach((menuItem) => {
+  if (!document.querySelector('.home-page')) {
+    menuItem.removeAttribute('data-goto');
+  }
 });
 
 document.querySelector('#date').textContent = new Date().getFullYear();
