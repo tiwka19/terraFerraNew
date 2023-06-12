@@ -455,6 +455,8 @@
     margin-bottom: rem(35);
   }
   &__data {
+    padding-left: rem(15);
+    padding-right: rem(15);
     text-align: center;
     @include adaptiveValue('padding-top', 100, 50);
     @include adaptiveValue('padding-bottom', 100, 50);
