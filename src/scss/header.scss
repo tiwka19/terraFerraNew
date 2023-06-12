@@ -9,10 +9,7 @@
   background-color: #fff;
   border-bottom: 1px solid #d7d7d7;
   z-index: 100;
-  transition: all 0.2s ease 0s;
-  &._header-scroll {
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-  }
+
   @media (max-width: $mobile) {
     &::before {
       content: '';
@@ -20,7 +17,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: rem(58);
+      @include adaptiveValue('height', 58, 55);
       z-index: 2;
       background-color: #fff;
     }
