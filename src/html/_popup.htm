@@ -22,8 +22,10 @@
               <input autocomplete="off" type="text" name="form[]" placeholder="Name" class="input" data-required="text" />
               <input autocomplete="off" type="email" name="form[]" placeholder="Email" class="input" data-required="email" />
               <div class="form__row">
-                <input type="checkbox" class="checkbox" data-error="Field required" id="cb1" data-required="checkbox" />
-                <label for="cb1">I agree to <a href="#">Privacy Policy and Terms of Service</a> </label>
+                <div class="checkbox">
+                  <input id="accept_des" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" data-required="checkbox" />
+                  <label class='checkbox__label' for="accept_des">I agree to <a href="#">Privacy Policy and Terms of Service</a> </label>
+                </div>
               </div>
               <div class="form__button">
                 <input type="submit" class="button" value="Join Waitlist" />
@@ -38,8 +40,10 @@
               <input autocomplete="off" type="text" name="form[]" placeholder="Instagram" class="input" />
 
               <div class="form__row">
-                <input type="checkbox" class=checkbox" id="cb2" data-required="checkbox" />
-                <label for="cb2">I agree to <a href="#">Privacy Policy and Terms of Service</a> </label>
+                <div class="checkbox">
+                  <input id="accept_inf" data-error="Ошибка" class="checkbox__input" type="checkbox" value="1" data-required="checkbox" />
+                  <label class='checkbox__label' for="accept_inf">I agree to <a href="#">Privacy Policy and Terms of Service</a> </label>
+                </div>
               </div>
               <div class="form__button">
                 <input type="submit" class="button" value="Contact us" />
