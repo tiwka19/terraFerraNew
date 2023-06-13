@@ -3,6 +3,40 @@ import { isMobile } from './functions.js';
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
 
+import JustValidate from 'just-validate';
+
+const validator = new JustValidate('#designerForm', {});
+validator
+  .addField('#name', [{ rule: 'required' }])
+  .addField('#email', [{ rule: 'required' }, { rule: 'email' }])
+  .addField('#phone', [{ rule: 'required' }, { rule: 'number' }])
+  .addField('#phone', [{ rule: 'required' }, { rule: 'number' }])
+  .addField('#accept_des', [{ rule: 'required' }])
+  .addField('#website', [{ rule: 'required' }])
+  .onSuccess((event) => event.currentTarget.submit());
+
+const forms = document.querySelectorAll('form');
+forms.forEach((form) => {
+  const formInputs = form.querySelectorAll('input');
+  const formButton = form.querySelector('.button');
+  formInputs.forEach((input) => {
+    input.addEventListener('input', () => {
+      const isFormFilled = Array.from(formInputs).every((input) => {
+        if (input.type === 'checkbox') {
+          return input.checked;
+        } else {
+          return input.value !== '';
+        }
+      });
+      if (isFormFilled) {
+        formButton.classList.add('_active');
+      } else {
+        formButton.classList.remove('_active');
+      }
+    });
+  });
+});
+
 const slider = () => {
   const checkSlider = document.querySelector('.advantages__slider ');
   const designerContent = document.querySelector('.advantages__item--designers');

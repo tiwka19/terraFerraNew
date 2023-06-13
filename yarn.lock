@@ -4851,6 +4851,11 @@ just-debounce@^1.0.0:
   resolved "https://registry.yarnpkg.com/just-debounce/-/just-debounce-1.1.0.tgz#2f81a3ad4121a76bc7cb45dbf704c0d76a8e5ddf"
   integrity sha512-qpcRocdkUmf+UTNBYx5w6dexX5J31AKK1OmPwH630a83DdVVUIngk55RSAiIGpQyoH0dlr872VHfPjnQnK1qDQ==
 
+just-validate@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/just-validate/-/just-validate-4.2.0.tgz#50cea442a85ff3ee63d420bac3eea444b45f5da2"
+  integrity sha512-ot4U9dAvveXlkA5tpiK1Obh+ZwJYBUsiS1sFjfY4RjkHwXLXGoEgOM4N85+9UCAu9JPGt/nfumqRZbruUT9gMA==
+
 kew@^0.7.0:
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/kew/-/kew-0.7.0.tgz#79d93d2d33363d6fdd2970b335d9141ad591d79b"

@@ -13,6 +13,7 @@ textarea {
   display: block;
   padding: rem(15);
   border: rem(2) solid #ebeaec;
+  position: relative;
   font-size: rem(18);
   line-height: math.div(21, 18);
   border-radius: rem(13);
@@ -26,6 +27,9 @@ textarea {
   }
   &._form-error {
     border: rem(2) solid rgb(171, 53, 53);
+  }
+  &.just-validate-error-field {
+    border: rem(2) solid #b81111;
   }
 }
 
@@ -48,10 +52,6 @@ textarea.input {
   resize: none;
   padding: 0px 0px;
 }
-
-
-
-
 
 .switch {
   height: rem(64);

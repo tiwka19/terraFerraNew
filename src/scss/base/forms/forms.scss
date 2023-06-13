@@ -2,6 +2,7 @@
 // Снипет (HTML):
 .form {
   &__row {
+    position: relative;
     display: flex;
     gap: rem(10);
     margin-bottom: rem(10);
@@ -21,24 +22,19 @@
   &__input {
   }
   &__button {
+    pointer-events: none;
+    background-color: #b1afb5 !important;
+    &._active {
+      cursor: pointer;
+      pointer-events: all;
+      background-color: #5c6bd7 !important;
+    }
   }
   &__error {
   }
-  &__button {
-    text-align: center;
+  &__send {
     margin-top: rem(30);
-    &._active {
-      button,
-      input {
-        pointer-events: auto;
-        background-color: #5c6bd7;
-        @media (any-hover: hover) {
-          &:hover {
-            background-color: #3e4cb3;
-          }
-        }
-      }
-    }
+    text-align: center;
   }
 }
 
@@ -57,7 +53,7 @@
 
 // <CHECK>
 // Снипет (HTML): chk
-@import "checkbox";
+@import 'checkbox';
 
 // <RADIO>
 // Снипет (HTML): opt
