@@ -449,9 +449,7 @@
   }
 
   .page-team & {
-    @media (max-width: $mobile) {
-      border-top: 1px solid #d7d7d7;
-    }
+    border-top: 1px solid #d7d7d7;
   }
 
   // &::before {
