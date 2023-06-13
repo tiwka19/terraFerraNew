@@ -441,6 +441,15 @@
 }
 .contacts {
   position: relative;
+
+
+  .home-page & {
+
+    @media (max-width:$mobile){
+      border-top: 1px solid #d7d7d7;
+    }
+  }
+
   // &::before {
   //   content: '';
   //   position: absolute;
