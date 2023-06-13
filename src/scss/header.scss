@@ -8,7 +8,20 @@
   @include adaptiveValue('padding-bottom', 30, 15);
   background-color: #fff;
   border-bottom: 1px solid #d7d7d7;
-  z-index: 150;
+  z-index: 100;
+
+  @media (max-width: $mobile) {
+    &::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      @include adaptiveValue('height', 58, 55);
+      z-index: 2;
+      background-color: #fff;
+    }
+  }
   &__container {
     display: flex;
     justify-content: space-between;
@@ -23,6 +36,9 @@
   }
   &__menu--mobile {
     display: none;
+
+    height: 100%;
+
     .menu__list {
       margin-bottom: rem(70);
     }
@@ -50,12 +66,11 @@
       height: 100%;
       top: 0;
       right: 0;
+      overflow: auto;
       transition: all 0.2s ease 0s;
       transform: translateX(120%);
       background-color: #fff;
-      gap: rem(30);
       padding: rem(100) rem(15) rem(30) rem(15);
-      border-radius: rem(12);
       .menu-open & {
         transform: translateX(0);
       }

@@ -1,33 +1,84 @@
 //<FORM>
-// Сніппет (HTML):
+// Снипет (HTML):
 .form {
-	&__row {
-	}
-	&__column {
-	}
-	&__line {
-	}
-	&__input {
-	}
-	&__button {
-	}
-	&__error {
-	}
+  &__row {
+    display: flex;
+    gap: rem(10);
+    margin-bottom: rem(10);
+    p {
+      margin-bottom: rem(30);
+      display: flex;
+      gap: rem(5);
+    }
+    label a {
+      color: #5c6bd7;
+    }
+  }
+  &__column {
+  }
+  &__line {
+  }
+  &__input {
+  }
+  &__button {
+  }
+  &__error {
+  }
+  &__button {
+    text-align: center;
+    margin-top: rem(30);
+    &._active {
+      button,
+      input {
+        pointer-events: auto;
+        background-color: #5c6bd7;
+        @media (any-hover: hover) {
+          &:hover {
+            background-color: #3e4cb3;
+          }
+        }
+      }
+    }
+  }
+}
+
+.wpcf7-spinner {
+  display: none;
 }
 //</FORM>
 
 // <BUTTONS>
-// Сніппет (HTML): btn
-@import "button";
+// Снипет (HTML): btn
+@import 'button';
 
 // <INPUTS>
-// Сніппет (HTML): inp
-@import "input";
+// Снипет (HTML): inp
+@import 'input';
 
 // <CHECK>
-// Сніппет (HTML): chk
-// @import "checkbox";
+// Снипет (HTML): chk
+@import "checkbox";
+
+// <RADIO>
+// Снипет (HTML): opt
+// @import "radio";
 
 // <SELECT>
-// Сніппет (HTML): sel
-// @import "select";
+// Снипет (HTML): sel
+@import 'select';
+
+// <RATING>
+// Снипет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Снипет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Снипет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Снипет (HTML):
+// @import "datepicker";

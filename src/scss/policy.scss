@@ -1,0 +1,47 @@
+.policy {
+  padding-bottom: rem(100);
+  &__title {
+    @include adaptiveValue('font-size', 30, 24);
+    line-height: math.div(30, 36);
+    margin-bottom: rem(40);
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  article {
+    p {
+      font-size: rem(18);
+      padding: rem(5) 0;
+    }
+    h2,
+    h3 {
+      margin: rem(10) 0;
+      font-weight: 500;
+    }
+    h2 {
+      font-size: rem(22);
+    }
+    h3 {
+      font-size: rem(20);
+    }
+    ul,
+    ol {
+      padding-left: rem(25);
+      margin-bottom: rem(15);
+      margin-top: rem(10);
+      font-size: rem(18);
+    }
+    ul li {
+      list-style: disc;
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+    a {
+      color: #5c6bd7;
+      &:not(:last-child) {
+        margin-bottom: rem(5);
+      }
+    }
+  }
+}

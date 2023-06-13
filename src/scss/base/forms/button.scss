@@ -11,8 +11,10 @@
   border-radius: 13px;
 	color: #FFF;
   line-height: math.div(27, 24);
+  transition: background-color 0.2s ease 0s;
   @media (any-hover: hover) {
     &:hover {
+      background-color: #3e4cb3;
     }
   }
   &._fw {

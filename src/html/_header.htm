@@ -1,26 +1,34 @@
 <header class="header">
   <div class="header__container">
-    <a href="#" class="header__logo"><img src="@img/logo.svg" alt="" /></a>
+    <a href="/" class="header__logo"><img src="@img/logo.svg" alt="" /></a>
     <div class="header__menu menu">
       <nav class="menu__body">
         <ul class="menu__list">
-          <li class="menu__item"><a href="#" class="menu__link">for designers</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">for influencers</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">pricing</a></li>
+          <li class="menu__item">
+            <a href='/#advantages' class="menu__link _designers" 
+            data-goto="#advantages" data-goto-header data-goto-top="50px">for designers</a>
+          </li>
+          <li class="menu__item">
+            <a href='/#advantages' class="menu__link _influencers" 
+            data-goto="#advantages" data-goto-header data-goto-top="50px">for influencers</a>
+          </li>
+          <li class="menu__item"><a href="/pricing.html" class="menu__link">pricing</a></li>
+          <li class="menu__item"><a href="/team.html" class="menu__link">team</a></li>
         </ul>
       </nav>
     </div>
     <div class="header__menu--mobile">
       <nav class="menu__body">
         <ul class="menu__list">
-          <li class="menu__item"><a href="#" class="menu__link">for designers</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">for influencers</a></li>
-          <li class="menu__item"><a href="#" class="menu__link">pricing</a></li>
+          <li class="menu__item"><a href='/#advantages' class="menu__link _designers" data-goto="#advantages" data-goto-header data-goto-top='50px'>for designers</a></li>
+          <li class="menu__item"><a href='' class="menu__link _influencers" data-goto="#advantages" data-goto-header data-goto-top='50px'>for influencers</a></li>
+          <li class="menu__item"><a href="/pricing.html" class="menu__link">pricing</a></li>
+          <li class="menu__item"><a href="/team.html" class="menu__link">team</a></li>
         </ul>
         <div class="menu__mask">
           <img src="@img/header-menu-mask.svg" alt="menu mask" />
         </div>
-        <a href="#" class="button">Contact us</a>
+        <a href="#" class="button" data-popup='#popup'>Contact us</a>
       </nav>
     </div>
     <button type="button" class="menu__icon icon-menu"><span></span></button>
