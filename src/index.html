@@ -1,180 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  @@include('html/_head.htm',{ "title":"Home" })
+@@include('html/_head.htm',{ "title":"Home" })
 
-  <body>
-    <div class="wrapper">
-      @@include('html/_header.htm',{})
-      <main class="page home-page">
-        <section class="hero">
-          <div class="hero__container">
-            <div class="hero__wrapper">
-              <div class="hero__image">
-                <img src="@img/hero.png" alt="hero image" />
-                <div class="hero__image-text">
-                  Fashion <br />
-                  co-creation <br />
-                  platform
-                </div>
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page home-page">
+      <section class="hero">
+        <div class="hero__container">
+          <div class="hero__wrapper">
+            <div class="hero__image">
+              <img src="@img/hero.png" alt="hero image" />
+              <div class="hero__image-text">
+                Fashion <br />
+                co-creation <br />
+                platform
               </div>
-              <div class="hero__data">
-                <div class="hero__title">We know how to make your next fashion collab a game changer!</div>
-                <p class="hero__descr">
-                  Fed up with collaborations that don’t really feel... collaborative? So are we! That’s why we’re stepping away from the typical
-                  "sponsored content". Imagine crafting real products with a like-minded creative partner, products that your audience doesn't just
-                  adore, but can actively contribute to. We're here to help turn this vision into a reality!
-                </p>
-                <a href="#" class="hero__button button" data-popup='#popup'>APPLY NOW</a>
-                <div class="hero__phone">
-                  <img src="@img/phone.png" width="407" height="845" alt="phone" />
-                </div>
+            </div>
+            <div class="hero__data">
+              <div class="hero__title">We know how to make your next fashion collab a game changer!</div>
+              <p class="hero__descr">
+                Fed up with collaborations that don’t really feel... collaborative? So are we! That’s why we’re stepping
+                away from the typical
+                "sponsored content". Imagine crafting real products with a like-minded creative partner, products that
+                your audience doesn't just
+                adore, but can actively contribute to. We're here to help turn this vision into a reality!
+              </p>
+              <a href="#" class="hero__button button" data-popup="#popup">APPLY NOW</a>
+              <div class="hero__phone">
+                <img src="@img/phone.png" width="407" height="845" alt="phone" />
               </div>
             </div>
           </div>
-        </section>
-        <section class="benefits">
-          <div class="benefits__container">
-            <div class="benefits__wrapper">
-              <div class="benefits__decor">
-                <div class="benefits__decor-image">
-                  <picture>
-                    <source srcset="@img/benefits.png" media="(min-width: 480px)" />
-                    <img src="@img/benefits-mobile.png" alt="MDN" />
-                  </picture>
-                </div>
-              </div>
-              <div class="benefits__data">
-                <div class="benefits__data-item benefits__item">
-                  <div class="benefits__item-title">Discover Your Perfect Collaboration Soulmate</div>
-                  <p class="benefits__item-descr">
-                    Get paired with a partner who vibes with you, creating collaborations that truly resonate! Let's unearth those hidden gems
-                    together.
-                  </p>
-                </div>
-                <div class="benefits__data-item benefits__item">
-                  <div class="benefits__item-title">Effortless Collaboration and Co-ownership</div>
-                  <p class="benefits__item-descr">
-                    We've got your back in simplifying collaboration and integrating co-ownership, so you and your partner can pour all energy into
-                    crafting exceptional products.
-                  </p>
-                </div>
-                <div class="benefits__data-item benefits__item">
-                  <div class="benefits__item-title">Unite Fans, Boost Excitement</div>
-                  <p class="benefits__item-descr">
-                    With our platform, fans can jump right into the creative process, winning awesome prizes and even revenue shares. This fun-filled
-                    journey sparks deeper connections, amplifies excitement and naturally drives sales up!
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="benefits__image">
-              <picture>
-                <source srcset="@img/benefits-big.png" media="(min-width: 768px)" />
-                <source srcset="@img/benefits-md.png" media="(min-width: 480px)" />
-                <img src="@img/benefits-sm.png" alt="image" />
-              </picture>
-            </div>
-          </div>
-        </section>
-        <section class="advantages" id="advantages">
-          <div class="advantages__container">
-            <nav class="advantages__navigation">
-              <span class="advantages__navigation-title">for designers</span>
-              <label class="switch" for="checkbox">
-                <input type="checkbox" id="checkbox" />
-                <div class="advantages__slider round"></div>
-              </label>
-              <span class="advantages__navigation-title">for influencers</span>
-            </nav>
-            <div class="advantages__content">
-              <div class="advantages__items advantages__item--designers">
-                <div class="advantages__item">
-                  <h2 class="advantages__item-title">Creative Journey, Leveled Up</h2>
-                  <p class="advantages__item-descr">
-                    Welcome to a place where captivating games and smart marketing strategies make fashion a blast! It's all about the fun,
-                    interactive journey and the fabulous fashion you love.
-                  </p>
-                </div>
-                <div class="advantages__item">
-                  <h2 class="advantages__item-title">Connections, not Views</h2>
-                  <p class="advantages__item-descr">
-                    With our new format, you're not just buying an audience. You're pioneering a trend of forging genuine bonds, turning vibrant fans
-                    into your loyal tribe. Stand out, don't just follow.
-                  </p>
-                </div>
-                <div class="advantages__item">
-                  <h2 class="advantages__item-title">Eco-Conscious Impact</h2>
-                  <p class="advantages__item-descr">
-                    Champion sustainability with on-demand pre-sales, reducing waste, and honoring our planet. It's a powerful step, and your fans
-                    will applaud you for making a difference!
-                  </p>
-                </div>
-              </div>
-              <div class="advantages__items advantages__item--influencers">
-                <div class="advantages__item">
-                  <h2 class="advantages__item-title">Elevate Earnings & Creativity</h2>
-                  <p class="advantages__item-descr">Unlock the potential for higher earnings while embracing your own creative journey. Win big!</p>
-                </div>
-                <div class="advantages__item">
-                  <h2 class="advantages__item-title">Boost Audience Love</h2>
-                  <p class="advantages__item-descr">
-                    Team up with emerging designers to express yourself and supercharge your personal brand. Invite your audience into your world;
-                    they won't just watch, they'll be a part of the journey.
-                  </p>
-                </div>
-                <div class="advantages__item">
-                  <h2 class="advantages__item-title">Create Effortlessly & Learn the Trade</h2>
-                  <p class="advantages__item-descr">
-                    Let designers handle the nitty-gritty, so you can unleash your creative genius worry-free, all while learning the ins and outs of
-                    the fashion industry.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="subscribe">
-          <div class="subscribe__container">
-            <div class="subscribe__data">
-              <div class="subscribe__decor">
+        </div>
+      </section>
+      <section class="benefits">
+        <div class="benefits__container">
+          <div class="benefits__wrapper">
+            <div class="benefits__decor">
+              <div class="benefits__decor-image">
                 <picture>
                   <source srcset="@img/benefits.png" media="(min-width: 480px)" />
                   <img src="@img/benefits-mobile.png" alt="MDN" />
                 </picture>
               </div>
-              <div class="subscribe__content">
-                <h2 class="subscribe__title">Subscribe today</h2>
-                <ul class="subscribe__list">
-                  <li class="subscribe__list-item">Create 6+ high-impact collaborations per year</li>
-                  <li class="subscribe__list-item">Expand your horizons and creative team</li>
-                  <li class="subscribe__list-item">Surpass your own expectations and redefine success</li>
-                </ul>
-                <a href="#" class="subscribe__button button" data-popup='#popup'>Apply now</a>
-              </div>
             </div>
-            <div class="subscribe__images">
-              <div class="subscribe__image subscribe__image-one">
-                <img width="844" height="375" data-src="@img/subscribe-image-1.png" alt="subscribe" />
-              </div>
-              <div class="subscribe__image subscribe__image-three">
-                <img width="596" height="750" data-src="@img/subscribe-image-3.png" alt="subscribe" />
-              </div>
-              <div class="subscribe__image subscribe__image-two">
-                <img width="844" height="375" data-src="@img/subscribe-image-2.png" alt="subscribe" />
-              </div>
-            </div>
-          </div>
-        </section>
-        <section class="process">
-          <div class="process__container">
-            <h2 class="process__title">Our process</h2>
-            <div class="process__items">
-              <div class="process__item">
-                <span class="process__item-step">1</span>
-                <h2 class="process__item-title">Research & Strategy</h2>
-                <p class="process__item-descr">
-                  We analyze your brand, research competitors, and create a tailored collaboration strategy with potential partners, while considering
-                  audience feedback.
+            <div class="benefits__data">
+              <div class="benefits__data-item benefits__item">
+                <div class="benefits__item-title">Discover Your Perfect Collaboration Soulmate</div>
+                <p class="benefits__item-descr">
+                  Get paired with a partner who vibes with you, creating collaborations that truly resonate! Let's
+                  unearth those hidden gems
+                  together.
                 </p>
               </div>
               <div class="benefits__data-item benefits__item">
@@ -204,7 +81,8 @@
           </div>
         </div>
       </section>
-      <section class="advantages">
+
+      <section class="advantages" id="advantages">
         <div class="advantages__container">
           <nav class="advantages__navigation">
             <span class="advantages__navigation-title">for designers</span>
@@ -267,14 +145,15 @@
           </div>
         </div>
       </section>
+
       <section class="subscribe">
         <div class="subscribe__container">
           <div class="subscribe__data">
             <div class="subscribe__decor">
               <picture>
-                <source srcset="@img/tools-phone.png" media="(min-width: 992px)" />
-                <source srcset="@img/tools-md.png" media="(min-width: 768px)" />
-                <img data-src="@img/tools-phone.png" alt="image" />
+                <source srcset="@img/subscribe.svg" media="(min-width: 992px)" />
+                <source srcset="@img/subscribe-md.svg" media="(min-width: 576px)" />
+                <img src="@img/subscribe-sm.png" alt="subscribe decor" />
               </picture>
             </div>
             <div class="subscribe__content">
@@ -284,15 +163,18 @@
                 <li class="subscribe__list-item">Expand your horizons and creative team</li>
                 <li class="subscribe__list-item">Surpass your own expectations and redefine success</li>
               </ul>
-              <a href="#" class="subscribe__button button">Book a call</a>
+              <a href="#" class="subscribe__button button" data-popup="#popup">Apply now</a>
             </div>
           </div>
           <div class="subscribe__images">
-            <div class="subscribe__image subscribe__image-one"><img src="@img/subscribe-image-1.png" alt="subscribe" />
+            <div class="subscribe__image subscribe__image-one">
+              <img width="844" height="375" data-src="@img/subscribe-image-1.png" alt="subscribe" />
             </div>
-            <div class="subscribe__image subscribe__image-three"><img src="@img/subscribe-image-3.png"
-                alt="subscribe" /></div>
-            <div class="subscribe__image subscribe__image-two"><img src="@img/subscribe-image-2.png" alt="subscribe" />
+            <div class="subscribe__image subscribe__image-three">
+              <img width="596" height="750" data-src="@img/subscribe-image-3.png" alt="subscribe" />
+            </div>
+            <div class="subscribe__image subscribe__image-two">
+              <img width="844" height="375" data-src="@img/subscribe-image-2.png" alt="subscribe" />
             </div>
           </div>
         </div>
@@ -367,7 +249,7 @@
             <picture>
               <source srcset="@img/tools-phone.png" media="(min-width: 992px)" />
               <source srcset="@img/tools-md.png" media="(min-width: 768px)" />
-              <img src="@img/tools-phone.png" alt="image" />
+              <img data-src="@img/tools-phone.png" alt="image" />
             </picture>
           </div>
           <div class="tools__data">
@@ -431,19 +313,21 @@
               </div>
             </div>
           </div>
-        </section>
-        <section class="contacts">
-          <div class="contacts__data">
-            <h2 class="contacts__title">Fashion co-creation platform</h2>
-            <a href="#" class="contacts__button button" data-popup='#popup'>Contact us</a>
-          </div>
-          <div class="contacts__mask">
-            <img src="@img/contacts.svg" alt="mask" />
-          </div>
-        </section>
-      </main>
-      @@include('html/_footer.htm',{})
-    </div>
-    @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
-  </body>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__data">
+          <h2 class="contacts__title">Fashion co-creation platform</h2>
+          <a href="#" class="contacts__button button" data-popup="#popup">Contact us</a>
+        </div>
+        <div class="contacts__mask">
+          <img src="@img/contacts.svg" alt="mask" />
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
+</body>
+
 </html>
