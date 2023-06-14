@@ -4,21 +4,31 @@ import { isMobile } from './functions.js';
 import { flsModules } from './modules.js';
 
 import JustValidate from 'just-validate';
+import Toastify from 'toastify-js';
 
 const validator = new JustValidate('#designerForm', {});
 validator
   .addField('#name', [{ rule: 'required' }])
   .addField('#email', [{ rule: 'required' }, { rule: 'email' }])
   .addField('#phone', [{ rule: 'required' }, { rule: 'number' }])
-  .addField('#phone', [{ rule: 'required' }, { rule: 'number' }])
-  .addField('#accept_des', [{ rule: 'required' }])
   .addField('#website', [{ rule: 'required' }])
-  .onSuccess((event) => event.currentTarget.submit());
+  .addField('#accept_des', [{ rule: 'required' }])
+
+
+const validator2 = new JustValidate('#influencerForm', {});
+validator2
+  .addField('#nameInf', [{ rule: 'required' }])
+  .addField('#emailInf', [{ rule: 'required' }, { rule: 'email' }])
+  .addField('#phoneInf', [{ rule: 'required' }, { rule: 'number' }])
+  .addField('#websiteInf', [{ rule: 'required' }])
+  .addField('#accept_inf', [{ rule: 'required' }])
+ 
 
 const forms = document.querySelectorAll('form');
 forms.forEach((form) => {
-  const formInputs = form.querySelectorAll('input');
+  const formInputs = form.querySelectorAll('input.form-input');
   const formButton = form.querySelector('.button');
+  console.log(formButton);
   formInputs.forEach((input) => {
     input.addEventListener('input', () => {
       const isFormFilled = Array.from(formInputs).every((input) => {
@@ -36,6 +46,56 @@ forms.forEach((form) => {
     });
   });
 });
+
+document.querySelectorAll('form input[type="submit"]').forEach((formInput) => {
+  formInput.addEventListener('click', () => {
+    formInput.value = 'Please, wait...';
+    formInput.classList.add('_sending');
+  });
+});
+
+document.addEventListener('wpcf7invalid', function (event) {
+  let submitButton = event.target.querySelector('input[type="submit"]');
+  if (submitButton) {
+    submitButton.value = 'APPLY NOW';
+    submitButton.classList.remove('_sending');
+  }
+  Toastify({
+    text: 'One or more fields contain erroneous data',
+    duration: 6000,
+    fontSize: 30,
+    gravity: 'top',
+    position: 'right',
+    style: {
+      background: '#F27C4F',
+    },
+    onClick: function () {},
+  }).showToast();
+});
+
+document.addEventListener(
+  'wpcf7mailsent',
+  function (event) {
+    flsModules.popup.close('#popup');
+    let submitButton = event.target.querySelector('input[type="submit"]');
+    if (submitButton) {
+      submitButton.value = 'APPLY NOW';
+      submitButton.classList.remove('_sending');
+    }
+    Toastify({
+      text: 'Thanks for Your request. It has been sent successfully!',
+      duration: 6000,
+      fontSize: 30,
+      gravity: 'bottom',
+      position: 'center',
+      style: {
+        background: '#5C6BD7',
+      },
+      onClick: function () {},
+    }).showToast();
+  },
+  false,
+);
 
 const slider = () => {
   const checkSlider = document.querySelector('.advantages__slider ');

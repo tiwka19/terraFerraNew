@@ -60,7 +60,6 @@ body::after {
   width: 100%;
   max-width: rem(600);
   border-radius: rem(13);
-  position: relative;
   .lock & {
     visibility: visible;
   }

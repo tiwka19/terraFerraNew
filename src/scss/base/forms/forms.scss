@@ -29,6 +29,9 @@
       pointer-events: all;
       background-color: #5c6bd7 !important;
     }
+    &._sending {
+      pointer-events: none;
+    }
   }
   &__error {
   }
@@ -38,9 +41,6 @@
   }
 }
 
-.wpcf7-spinner {
-  display: none;
-}
 //</FORM>
 
 // <BUTTONS>
