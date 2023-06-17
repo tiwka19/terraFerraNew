@@ -139,7 +139,7 @@ const sr = ScrollReveal({
   delay: 200,
   reset: false,
   once: true,
-  mobile: false,
+  // mobile: false,
   easing: 'cubic-bezier(0.5, 0, 0, 1)',
 });
 sr.reveal(`.hero__image`);
