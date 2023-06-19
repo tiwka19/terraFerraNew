@@ -36,6 +36,9 @@
     @include adaptiveValue('font-size', 64, 28);
     line-height: math.div(73, 64);
     @include adaptiveValue('margin-bottom', 45, 25);
+    span {
+      display: inline-block;
+    }
   }
   &__descr {
     margin-bottom: rem(50);
