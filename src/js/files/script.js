@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
   AOS.init({
     duration: 650,
     anchorPlacement: 'top-bottom',
+    offset: (window.innerHeight * .1)
   });
 });
 
