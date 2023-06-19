@@ -72,6 +72,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"aos": "^3.0.0-beta.6",
 		"gulp-cheerio": "^1.0.0",
 		"isotope-layout": "^3.0.6",
 		"just-validate": "^4.2.0",

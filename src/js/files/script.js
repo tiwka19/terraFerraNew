@@ -5,7 +5,14 @@ import { flsModules } from './modules.js';
 
 import JustValidate from 'just-validate';
 import Toastify from 'toastify-js';
-import ScrollReveal from 'scrollreveal';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init({
+  anchorPlacement: 'top-bottom',
+});
+
+AOS.refresh();
 
 const validator = new JustValidate('#designerForm', {});
 validator
@@ -13,6 +20,7 @@ validator
   .addField('#email', [{ rule: 'required' }, { rule: 'email' }])
   .addField('#phone', [{ rule: 'required' }, { rule: 'number' }])
   .addField('#website', [{ rule: 'required' }])
+  
   .addField('#accept_des', [{ rule: 'required' }]);
 
 const validator2 = new JustValidate('#influencerForm', {});
@@ -131,36 +139,36 @@ menuItems.forEach((menuItem) => {
   }
 });
 
-const sr = ScrollReveal({
-  origin: 'top',
-  distance: '30px',
-  cleanup: true,
-  duration: 800,
-  delay: 200,
-  reset: false,
-  once: true,
-  // mobile: false,
-  easing: 'cubic-bezier(0.5, 0, 0, 1)',
-});
-sr.reveal(`.hero__image`);
-sr.reveal('.hero__title', { origin: 'top', delay: 400 });
-sr.reveal('.hero__phone', { origin: 'right', delay: 400 });
-sr.reveal('.hero__image-text', { origin: 'top', delay: 400 });
-sr.reveal('.benefits__decor-image', { origin: 'left' });
-sr.reveal('.benefits__item', { interval: 300 });
-sr.reveal('.benefits__image, .advantages', { origin: 'bottom' });
-sr.reveal('.subscribe__image-one', { origin: 'top', delay: 300 });
-sr.reveal('.subscribe__image-two', { origin: 'bottom', delay: 600 });
-sr.reveal('.subscribe__image-three', {
-  origin: 'right',
-  delay: 900,
-  viewOffset: {
-    top: 100,
-  },
-});
-sr.reveal('.process, .contacts');
-sr.reveal('.process__item', { interval: 300 });
-sr.reveal('.tools__image', { origin: 'left' });
-sr.reveal('.tools__data', { origin: 'right' });
+// const sr = ScrollReveal({
+//   origin: 'top',
+//   distance: '30px',
+//   cleanup: true,
+//   duration: 800,
+//   delay: 200,
+//   reset: false,
+//   once: true,
+//   // mobile: false,
+//   easing: 'cubic-bezier(0.5, 0, 0, 1)',
+// });
+// sr.reveal(`.hero__image`);
+// sr.reveal('.hero__title', { origin: 'top', delay: 400 });
+// sr.reveal('.hero__phone', { origin: 'right', delay: 400 });
+// sr.reveal('.hero__image-text', { origin: 'top', delay: 400 });
+// sr.reveal('.benefits__decor-image', { origin: 'left' });
+// sr.reveal('.benefits__item', { interval: 300 });
+// sr.reveal('.benefits__image, .advantages', { origin: 'bottom' });
+// sr.reveal('.subscribe__image-one', { origin: 'top', delay: 300 });
+// sr.reveal('.subscribe__image-two', { origin: 'bottom', delay: 600 });
+// sr.reveal('.subscribe__image-three', {
+//   origin: 'right',
+//   delay: 900,
+//   viewOffset: {
+//     top: 100,
+//   },
+// });
+// sr.reveal('.process, .contacts');
+// sr.reveal('.process__item', { interval: 300 });
+// sr.reveal('.tools__image', { origin: 'left' });
+// sr.reveal('.tools__data', { origin: 'right' });
 
 document.querySelector('#date').textContent = new Date().getFullYear();

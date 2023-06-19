@@ -250,7 +250,7 @@
     align-items: center;
     @include adaptiveValue('gap', 115, 30);
     position: relative;
-    ::after {
+    &::after {
       content: '';
       position: absolute;
       top: 0;
