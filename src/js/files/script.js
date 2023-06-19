@@ -9,10 +9,13 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 AOS.init({
-  anchorPlacement: 'top-bottom',
+
+  duration: 650,
+  anchorPlacement: 'top-bottom'
 });
 
 AOS.refresh();
+
 
 const validator = new JustValidate('#designerForm', {});
 validator
@@ -20,7 +23,7 @@ validator
   .addField('#email', [{ rule: 'required' }, { rule: 'email' }])
   .addField('#phone', [{ rule: 'required' }, { rule: 'number' }])
   .addField('#website', [{ rule: 'required' }])
-  
+
   .addField('#accept_des', [{ rule: 'required' }]);
 
 const validator2 = new JustValidate('#influencerForm', {});
