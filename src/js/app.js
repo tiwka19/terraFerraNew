@@ -75,7 +75,7 @@ Snippet (HTML):
 Documentation: https://template.fls.guru/template-docs/funktional-popup.html
 Snippet (HTML): pl, pop
 */
-import './libs/popup.js'
+import './libs/popup.js';
 /*
 Mouse parallax module
 Documentation: https://template.fls.guru/template-docs/modul-animacii-parallaks-obektov-pri-dvizhenii-myshi.html
@@ -138,7 +138,7 @@ Documentation on work in the template: https://template.fls.guru/template-docs/r
 Plugin documentation: https://swiperjs.com/
 Snippet (HTML): swiper
 */
-import "./files/sliders.js";
+import './files/sliders.js';
 // ================================================= ================================================= ================================================= ================================================= ===============================================
 // Page scrolling modules ===================================================== ================================================= ================================================= ================================================= ================================================= ===
 // ================================================= ================================================= ================================================= ================================================= ===============================================
