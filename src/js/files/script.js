@@ -14,10 +14,15 @@ AOS.init({
   offset: window.innerHeight * 0.1,
   startEvent: 'DOMContentLoaded',
   mirror: false,
-  once: true
+  once: true,
 });
 
-AOS.refresh();
+let scrollRef = 0;
+
+window.addEventListener('scroll', function () {
+  // increase value up to 10, then refresh AOS
+  scrollRef <= 10 ? scrollRef++ : AOS.refresh();
+});
 
 const validator = new JustValidate('#designerForm', {});
 validator
