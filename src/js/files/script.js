@@ -8,16 +8,17 @@ import Toastify from 'toastify-js';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-document.addEventListener('DOMContentLoaded', function () {
-  AOS.init({
-    duration: 650,
-    anchorPlacement: 'top-bottom',
-    offset: window.innerHeight * 0.1,
-    once: true,
-  });
+AOS.init({
+  duration: 650,
+  anchorPlacement: 'top-bottom',
+  offset: window.innerHeight * 0.1,
+  startEvent: 'DOMContentLoaded',
+  mirror: false,
+  once: true,
 });
 
-AOS.refresh();
+setTimeout(() => {AOS.refresh();}, 500);
+
 
 const validator = new JustValidate('#designerForm', {});
 validator

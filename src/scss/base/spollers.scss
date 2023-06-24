@@ -15,11 +15,6 @@
 .spollers__title {
   width: 100%;
   cursor: pointer;
-  @media (any-hover: hover) {
-    &:hover {
-      color: #5c6bd7;
-    }
-  }
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,11 +26,22 @@
     pointer-events: none;
   }
 
+  
+
+
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: #5c6bd7;
+    }
+  }
+
   ._spoller-init & {
     svg {
       transition: transform 0.3s;
     }
     &._spoller-active {
+      color: #5c6bd7;
       svg {
         transform: rotate(-90deg);
       }
