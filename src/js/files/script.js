@@ -1,5 +1,5 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { isMobile } from './functions.js';
+import { isMobile, _slideUp, _slideDown } from './functions.js';
 // Підключення списку активних модулів
 import { flsModules } from './modules.js';
 
@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', function () {
   AOS.init({
     duration: 650,
     anchorPlacement: 'top-bottom',
-    offset: (window.innerHeight * .1)
+    offset: window.innerHeight * 0.1,
+    once: true,
   });
 });
 
@@ -114,8 +115,12 @@ const slider = () => {
   const influencersContent = document.querySelector('.advantages__item--influencers');
   if (!checkSlider) return;
   checkSlider.addEventListener('click', () => {
+    document.querySelectorAll('.advantages__item').forEach((item) => {
+      item.classList.remove('aos-animate');
+    });
     checkSlider.classList.toggle('_active');
     checkSlider.classList.contains('_active') ? showDesigners() : showInfluencers();
+    AOS.refresh();
   });
 
   document.addEventListener('click', (e) => {
@@ -126,11 +131,21 @@ const slider = () => {
   function showDesigners() {
     designerContent.classList.add('_hide');
     influencersContent.classList.add('_active');
+    influencersContent.querySelectorAll('.advantages__item').forEach((item) => {
+      setTimeout(function () {
+        item.classList.add('aos-animate');
+      }, 100);
+    });
     document.querySelector('#checkbox').checked = false;
   }
   function showInfluencers() {
     designerContent.classList.remove('_hide');
     influencersContent.classList.remove('_active');
+    designerContent.querySelectorAll('.advantages__item').forEach((item) => {
+      setTimeout(function () {
+        item.classList.add('aos-animate');
+      }, 100);
+    });
     document.querySelector('#checkbox').checked = true;
   }
 };
