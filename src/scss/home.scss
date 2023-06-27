@@ -208,7 +208,17 @@
   &__navigation-title {
     font-size: rem(24);
   }
-  &__items {
+  // &__items {
+  //   gap: rem(60);
+  //   display: flex;
+  //   align-items: flex-start;
+  //   justify-content: center;
+  //   @media (max-width: $tablet) {
+  //     flex-direction: column;
+  //     gap: rem(45);
+  //   }
+  // }
+  &__slide {
     gap: rem(60);
     display: flex;
     align-items: flex-start;
@@ -221,15 +231,6 @@
   &__item {
     @media (min-width: $tablet) {
       max-width: rem(358);
-    }
-    &--influencers {
-      display: none;
-    }
-    &--designers._hide {
-      display: none;
-    }
-    &--influencers._active {
-      display: flex;
     }
   }
   &__item-title {

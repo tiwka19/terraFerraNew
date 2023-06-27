@@ -110,47 +110,47 @@ document.addEventListener(
   false,
 );
 
-const slider = () => {
-  const checkSlider = document.querySelector('.advantages__slider ');
-  const designerContent = document.querySelector('.advantages__item--designers');
-  const influencersContent = document.querySelector('.advantages__item--influencers');
-  if (!checkSlider) return;
-  checkSlider.addEventListener('click', () => {
-    document.querySelectorAll('.advantages__item').forEach((item) => {
-      item.classList.remove('aos-animate');
-    });
-    checkSlider.classList.toggle('_active');
-    checkSlider.classList.contains('_active') ? showDesigners() : showInfluencers();
-    AOS.refresh();
-  });
+// const slider = () => {
+//   const checkSlider = document.querySelector('.advantages__slider ');
+//   const designerContent = document.querySelector('.advantages__item--designers');
+//   const influencersContent = document.querySelector('.advantages__item--influencers');
+//   if (!checkSlider) return;
+//   checkSlider.addEventListener('click', () => {
+//     document.querySelectorAll('.advantages__item').forEach((item) => {
+//       item.classList.remove('aos-animate');
+//     });
+//     checkSlider.classList.toggle('_active');
+//     checkSlider.classList.contains('_active') ? showDesigners() : showInfluencers();
+//     AOS.refresh();
+//   });
 
-  document.addEventListener('click', (e) => {
-    e.target.classList.contains('_influencers') ? showInfluencers() : null;
-    e.target.classList.contains('_designers') ? showDesigners() : null;
-  });
+//   document.addEventListener('click', (e) => {
+//     e.target.classList.contains('_influencers') ? showInfluencers() : null;
+//     e.target.classList.contains('_designers') ? showDesigners() : null;
+//   });
 
-  function showDesigners() {
-    designerContent.classList.add('_hide');
-    influencersContent.classList.add('_active');
-    influencersContent.querySelectorAll('.advantages__item').forEach((item) => {
-      setTimeout(function () {
-        item.classList.add('aos-animate');
-      }, 100);
-    });
-    document.querySelector('#checkbox').checked = false;
-  }
-  function showInfluencers() {
-    designerContent.classList.remove('_hide');
-    influencersContent.classList.remove('_active');
-    designerContent.querySelectorAll('.advantages__item').forEach((item) => {
-      setTimeout(function () {
-        item.classList.add('aos-animate');
-      }, 100);
-    });
-    document.querySelector('#checkbox').checked = true;
-  }
-};
-slider();
+//   function showDesigners() {
+//     designerContent.classList.add('_hide');
+//     influencersContent.classList.add('_active');
+//     influencersContent.querySelectorAll('.advantages__item').forEach((item) => {
+//       setTimeout(function () {
+//         item.classList.add('aos-animate');
+//       }, 100);
+//     });
+//     document.querySelector('#checkbox').checked = false;
+//   }
+//   function showInfluencers() {
+//     designerContent.classList.remove('_hide');
+//     influencersContent.classList.remove('_active');
+//     designerContent.querySelectorAll('.advantages__item').forEach((item) => {
+//       setTimeout(function () {
+//         item.classList.add('aos-animate');
+//       }, 100);
+//     });
+//     document.querySelector('#checkbox').checked = true;
+//   }
+// };
+// slider();
 
 const menuItems = document.querySelectorAll('a[data-goto]');
 menuItems.forEach((menuItem) => {

@@ -17,91 +17,36 @@ EffectFade, Lazy, Manipulation
 
 // Стилі Swiper
 // Базові стилі
-import '../../scss/base/swiper.scss';
+// import '../../scss/base/swiper.scss';
 // Повний набір стилів з scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import '../../scss/libs/swiper.scss';
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 
 // Ініціалізація слайдерів
 function initSliders() {
-  // Список слайдерів
-  // Перевіряємо, чи є слайдер на сторінці
-  if (document.querySelector('.swiper')) {
-    // Вказуємо склас потрібного слайдера
-    // Створюємо слайдер
-    new Swiper('.swiper', {
-      // Вказуємо склас потрібного слайдера
-      // Підключаємо модулі слайдера
-      // для конкретного випадку
-      modules: [Navigation],
+  const swiper = new Swiper('.swiper', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 30,
+    speed: 800,
+    allowTouchMove: false,
+  });
+  // Получаем ссылку на чекбокс
+  const slideCheckbox = document.getElementById('slideCheckbox');
 
-      slidesPerView: 'auto',
-      spaceBetween: 30,
-      speed: 800,
-      loop: true,
-
-      //touchRatio: 0,
-      //simulateTouch: false,
-      //loop: true,
-      //preloadImages: false,
-      // lazy: true,
-
-      // Кнопки "вліво/вправо"
-      navigation: {
-        prevEl: '.team__button-prev',
-        nextEl: '.team__button-next	',
-      },
-
-      // Брейкпоінти
-      breakpoints: {
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        1268: {
-          slidesPerView: 'auto',
-          spaceBetween: 30,
-        },
-      },
-
-      // Події
-      on: {},
-    });
-  }
-}
-// Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
-function initSlidersScroll() {
-  let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
-  if (sliderScrollItems.length > 0) {
-    for (let index = 0; index < sliderScrollItems.length; index++) {
-      const sliderScrollItem = sliderScrollItems[index];
-      const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
-      const sliderScroll = new Swiper(sliderScrollItem, {
-        observer: true,
-        observeParents: true,
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        freeMode: {
-          enabled: true,
-        },
-        scrollbar: {
-          el: sliderScrollBar,
-          draggable: true,
-          snapOnRelease: false,
-        },
-        mousewheel: {
-          releaseOnEdges: true,
-        },
-      });
-      sliderScroll.scrollbar.updateSize();
+  // Добавляем обработчик события изменения состояния чекбокса
+  slideCheckbox.addEventListener('change', () => {
+    // Если чекбокс активен, переключаемся на второй слайд
+    if (slideCheckbox.checked) {
+      swiper.slideTo(1);
+    } else {
+      // Если чекбокс неактивен, переключаемся на первый слайд
+      swiper.slideTo(0);
     }
-  }
+  });
 }
 
 window.addEventListener('load', function (e) {
-  // Запуск ініціалізації слайдерів
   initSliders();
-  // Запуск ініціалізації скролла на базі слайдера (за класом swiper_scroll)
-  //initSlidersScroll();
 });
